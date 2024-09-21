@@ -40,6 +40,7 @@
 </script>
 
 
+
 </head>
 
 <body>
@@ -57,7 +58,7 @@
 						<ul id="menu-main" class="nav">
 							<li><a title="team" href="#about">About</a></li>
 							<li><a title="works" href="#works">Achievement</a></li>
-							<li><a title="services" href="#services">Hobby</a></li>
+							<li><a title="services" href="#services">Activities</a></li>
 							<li><a title="contact" href="#contact">Contact</a></li>
 						</ul>
 					</nav>
@@ -175,18 +176,103 @@
 			</div>
 			
 			<div class="row">
-				<div class="span4 offset1 flyIn">
-					<div class="people">
-						<h3>Skills</h3>
-						<p>
-							- Programming: C++, Python, JavaScript<br>
-							- Web Development: HTML, CSS, Bootstrap, React<br>
-							- Databases: MySQL, MongoDB<br>
-							- Version Control: Git, GitHub
-						</p>
-					</div>
-				</div>
-			</div>
+    <div class="span4 offset1 flyIn">
+        <div class="people">
+            <h3>Skills</h3>
+
+            <div class="skills-container">
+                <div class="skill-circle">
+                    <div class="circle" data-percentage="95" style="--circle-color: #f70c0c;" >
+                        <span>HTML - 95%</span>
+                    </div>
+                </div>
+                <div class="skill-circle">
+                    <div class="circle" data-percentage="90" style="--circle-color: #dbf306;">
+                        <span>CSS - 90%</span>
+                    </div>
+                </div>
+                <div class="skill-circle">
+                    <div class="circle" data-percentage="85" style="--circle-color: #0896f5;">
+                        <span>JavaScript - 85%</span>
+                    </div>
+                </div>
+                <div class="skill-circle">
+                    <div class="circle" data-percentage="75" style="--circle-color: #07fa64;">
+                        <span>NodeJS - 75%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Flex container for skills */
+    .skills-container {
+    display: flex;
+    justify-content: space-around; /* Or you can use space-between */
+    align-items: center;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    gap: 80px; /* Adjust the space between circles (was 20px) */
+    padding: 20px; /* Optional padding around the container */
+}
+
+
+    .skill-circle {
+        flex: 0 1 120px; /* Prevents excessive shrinking, sets base width */
+        max-width: 120px;
+    }
+
+    .circle {
+        --percentage: 0;
+        --circle-color: #000;
+        width: 120px;
+        height: 120px;
+        background: conic-gradient(var(--circle-color) calc(var(--percentage) * 1%), #fdfdfd 0);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        color: #000000;
+        position: relative;
+        border: 2px solid #020202;
+    }
+
+    .circle span {
+        position: absolute;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .circle:hover {
+        transform: scale(1.1); /* Slightly enlarges the circle on hover */
+        transition: transform 0.3s ease;
+    }
+
+    /* Custom percentages for each circle */
+    .circle[data-percentage="95"] {
+        --percentage: 95;
+    }
+
+    .circle[data-percentage="90"] {
+        --percentage: 90;
+    }
+
+    .circle[data-percentage="85"] {
+        --percentage: 85;
+    }
+
+    .circle[data-percentage="75"] {
+        --percentage: 75;
+    }
+</style>
+
+
+
+
+
+
 			
 		<!-- /.container -->
 	</section>
@@ -194,48 +280,60 @@
 	<!-- section: services -->
 	<section id="services" class="section orange">
 		<div class="container">
-			<h4>Hobby</h4>
+			<h4>Extra Curricular Activities</h4>
 			<!-- Four columns -->
 			<div class="row">
 				<div class="span3 animated-fast flyIn">
 					<div class="service-box">
 						<img src="img/set.png" alt="" />
 						<h2>Playing Vollyball</h2>
-						<p>
-							I started playing Vollyball during my college life and achieve a winning cup. 
-						</p>
+						
 					</div>
 				</div>
 				<div class="span3 animated flyIn">
 					<div class="service-box">
-						<img src="img/woman.png" alt="" />
-						<h2>Eating outside</h2>
-						<p>
-							I use to eat a lot in outside.
-						</p>
+						<img src="img/icons/dance.png" alt="" />
+						<h2>Dance</h2>
+						
 					</div>
 				</div>
 				<div class="span3 animated-fast flyIn">
 					<div class="service-box">
 						<img src="img/cooking.png" alt="" />
 						<h2>Cooking</h2>
-						<p>
-							Yeah! I can cook. whether its good or bad don't complain anything if you have mercy for your life.huh..
-						</p>
-					</div>
-				</div>
-				<div class="span3 animated-slow flyIn">
-					<div class="service-box">
-						<img src="img/woman (1).png" alt="" />
-						<h2>Shopping</h2>
-						<p>
-							Now What can I say, It's a common thing for any girl You Know. I love it. 
-						</p>
+						
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<section id="services" class="section orange">
+		<div class="container">
+			<h4>Hobby</h4>
+			<!-- Four columns -->
+			<div class="row">
+				<div class="span3 animated-fast flyIn">
+					<div class="service-box">
+						<img src="img/icons/luggage.png" alt="" />
+						<h2>Travelling</h2>
+					</div>
+				</div>
+				<div class="row">
+				<div class="span3 animated-fast flyIn">
+					<div class="service-box">
+						<img src="img/icons/woman.png" alt="" />
+						<h2>Eating</h2>
+					</div>
+				</div>
+				<div class="row">
+				<div class="span3 animated-fast flyIn">
+					<div class="service-box">
+						<img src="img/icons/woman (1).png" alt="" />
+						<h2>Shopping</h2>
+					</div>
+				</div>
+	</section>			
 	<!-- end section: services -->
 	<!-- section: achievement -->
 	<section id="works" class="section">
@@ -265,6 +363,8 @@
 				</div>
 				<!-- END PORTFOLIO FILTERING -->
 			</div>
+
+			
 			<div class="row">
 				<div class="span12">
 					<div id="portfolio-wrap">
@@ -360,9 +460,9 @@
 	<!-- section: contact -->
 	<section id="contact" class="section green">
 		<div class="container">
-			<h4>Get in Touch</h4>
+			<h4>Want to Know Something?</h4>
 			<p>
-				<strong>Its a Temporary contact details..huh Don't even try to call or message me.</strong>
+				<strong>Feel free to ask any question.</strong>
 			</p>
 			<div class="blankdivider30">
 			</div>
